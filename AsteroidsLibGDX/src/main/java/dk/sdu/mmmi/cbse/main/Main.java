@@ -4,9 +4,10 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 
 public class Main {
-	
+	private static float x;
 	public static void main(String[] args) {
 		
+                System.out.println(x);
 		LwjglApplicationConfiguration cfg =
 			new LwjglApplicationConfiguration();
 		cfg.title = "Asteroids";
