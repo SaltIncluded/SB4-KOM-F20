@@ -10,7 +10,7 @@ import dk.sdu.mmmi.cbse.main.Game;
 
 /**
  *
- * @author Sn0wH
+ * @author Casper
  */
 public class Enemy extends SpaceObject {
     private float maxSpeed;
