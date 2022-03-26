@@ -13,11 +13,7 @@ import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
 import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.util.SPILocator;
 import dk.sdu.mmmi.cbse.managers.GameInputProcessor;
-import dk.sdu.mmmi.cbse.playersystem.PlayerControlSystem;
-import dk.sdu.mmmi.cbse.playersystem.PlayerPlugin;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 public class Game
         implements ApplicationListener {
@@ -26,8 +22,6 @@ public class Game
     private ShapeRenderer sr;
 
     private final GameData gameData = new GameData();
-    //private List<IEntityProcessingService> entityProcessors = new ArrayList<>();
-    //private List<IGamePluginService> entityPlugins = new ArrayList<>();
     private World world = new World();
 
     @Override
@@ -46,11 +40,6 @@ public class Game
                 new GameInputProcessor(gameData)
         );
 
-        //IGamePluginService playerPlugin = new PlayerPlugin();
-
-        //IEntityProcessingService playerProcess = new PlayerControlSystem();
-        //entityPlugins.add(playerPlugin);
-        //entityProcessors.add(playerProcess);
         // Lookup all Game Plugins using ServiceLoader
         for (IGamePluginService iGamePlugin : getPluginServices()) {
             iGamePlugin.start(gameData, world);
