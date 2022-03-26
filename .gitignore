@@ -6,3 +6,5 @@
 *.jar
 /*/runner/
 /JavaModularAsteroids/nbproject/private/
+/Exercises/JavaLab/AsteroidsEntityFramework/Asteroid/target/
+/Exercises/JavaLab/AsteroidsEntityFramework/Collision/target/
