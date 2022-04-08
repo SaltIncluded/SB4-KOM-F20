@@ -69,6 +69,8 @@
         <module>CommonAsteroid</module>
         <module>Asteroid</module>
         <module>Collision</module>
+        <module>CommonBullet</module>
+        <module>Bullet</module>
     </modules>
 
     <properties>

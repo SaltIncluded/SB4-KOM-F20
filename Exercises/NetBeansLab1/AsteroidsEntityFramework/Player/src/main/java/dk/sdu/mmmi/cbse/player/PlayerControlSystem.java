@@ -5,10 +5,14 @@ import dk.sdu.mmmi.cbse.common.data.GameData;
 import static dk.sdu.mmmi.cbse.common.data.GameKeys.LEFT;
 import static dk.sdu.mmmi.cbse.common.data.GameKeys.RIGHT;
 import static dk.sdu.mmmi.cbse.common.data.GameKeys.UP;
+
+import dk.sdu.mmmi.cbse.common.data.GameKeys;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
+import dk.sdu.mmmi.cbse.commonbullet.BulletSPI;
+import org.openide.util.Lookup;
 import org.openide.util.lookup.ServiceProvider;
 
 /**
@@ -28,7 +32,11 @@ public class PlayerControlSystem implements IEntityProcessingService {
             movingPart.setLeft(gameData.getKeys().isDown(LEFT));
             movingPart.setRight(gameData.getKeys().isDown(RIGHT));
             movingPart.setUp(gameData.getKeys().isDown(UP));
-            
+
+            if (gameData.getKeys().isDown(GameKeys.SPACE)) {
+                Entity bullet = Lookup.getDefault().lookup(BulletSPI.class).createBullet(player, gameData);
+                world.addEntity(bullet);
+            }
             
             movingPart.process(gameData, player);
             positionPart.process(gameData, player);
