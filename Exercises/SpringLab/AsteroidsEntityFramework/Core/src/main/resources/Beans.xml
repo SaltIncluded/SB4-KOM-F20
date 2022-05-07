@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="playerPlugin" class="dk.sdu.mmmi.cbse.playersystem.PlayerPlugin" />
+    <bean id="playerControlSystem" class="dk.sdu.mmmi.cbse.playersystem.PlayerControlSystem" />
+
+    <bean id="enemyPlugin" class="dk.sdu.mmmi.cbse.enemysystem.EnemyPlugin" />
+    <bean id="enemyControlSystem" class="dk.sdu.mmmi.cbse.enemysystem.EnemyControlSystem" />
+
+    <bean id="asteroidPlugin" class="dk.sdu.mmmi.cbse.asteroid.AsteroidPlugin" />
+    <bean id="asteroidControlSystem" class="dk.sdu.mmmi.cbse.asteroid.AsteroidControlSystem" />
+
+    <bean id="collider" class="dk.sdu.mmmi.cbse.collision.Collider" />
+</beans>
