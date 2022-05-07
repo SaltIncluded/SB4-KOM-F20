@@ -1,0 +1,6 @@
+#-----------------------------------------------------------------
+# Use this file to add customized Bnd instructions for the bundle
+#-----------------------------------------------------------------
+
+Bundle-SymbolicName: enemy
+Service-Component: META-INF/enemyplugin.xml, META-INF/enemyprocessor.xml
