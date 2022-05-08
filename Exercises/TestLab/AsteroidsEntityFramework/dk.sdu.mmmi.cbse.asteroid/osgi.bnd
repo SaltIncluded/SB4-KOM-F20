@@ -1,0 +1,6 @@
+#-----------------------------------------------------------------
+# Use this file to add customized Bnd instructions for the bundle
+#-----------------------------------------------------------------
+
+Bundle-SymbolicName: asteroid
+Service-Component: META-INF/asteroidplugin.xml, META-INF/asteroidprocessor.xml, META-INF/asteroidsplitter.xml

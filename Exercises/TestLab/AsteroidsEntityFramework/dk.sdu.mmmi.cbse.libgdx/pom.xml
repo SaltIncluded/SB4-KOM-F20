@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <parent>
+    <relativePath>../poms/libgdxwrappers/</relativePath>
+    <groupId>dk.sdu.mmmi.cbse.AsteroidsEntityFramework.build</groupId>
+    <artifactId>libgdxwrapper-bundle-settings</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <properties>
+    <bundle.symbolicName>dk.sdu.mmmi.cbse.libgdx</bundle.symbolicName>
+    <wrapped.groupId>dk.sdu.mmmi.cbse</wrapped.groupId>
+    <wrapped.artifactId>libgdx</wrapped.artifactId>
+    <libGDX.version>1.5.0</libGDX.version>
+    <wrapped.version>1.0-SNAPSHOT</wrapped.version>
+  </properties>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>dk.sdu.mmmi.cbse.AsteroidsEntityFramework</groupId>
+  <artifactId>dk.sdu.mmmi.cbse.libgdx</artifactId>
+  <!--<version>1.0-SNAPSHOT-001-SNAPSHOT</version>-->
+  <version>1.0-SNAPSHOT</version>
+
+  <!--<name>${bundle.symbolicName} ${wrapped.version} [osgi]</name>-->
+  <name>dk.sdu.mmmi.cbse.libgdx</name>
+
+  <packaging>bundle</packaging>
+
+  <dependencies>
+    <!--
+    <dependency>
+      <groupId>${wrapped.groupId}</groupId>
+      <artifactId>${wrapped.artifactId}</artifactId>
+      <version>${wrapped.version}</version>
+      <optional>true</optional>
+    </dependency>-->
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>osgi_R4_core</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>osgi_R4_compendium</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.badlogicgames.gdx</groupId>
+      <artifactId>gdx</artifactId>
+      <version>${libGDX.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.badlogicgames.gdx</groupId>
+      <artifactId>gdx-platform</artifactId>
+      <version>${libGDX.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.badlogicgames.gdx</groupId>
+      <artifactId>gdx-backend-lwjgl</artifactId>
+      <version>${libGDX.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.badlogicgames.gdx</groupId>
+      <artifactId>gdx-box2d</artifactId>
+      <version>${libGDX.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.badlogicgames.gdx</groupId>
+      <artifactId>gdx-freetype</artifactId>
+      <version>${libGDX.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.badlogicgames.gdx</groupId>
+      <artifactId>gdx-platform</artifactId>
+      <version>${libGDX.version}</version>
+      <classifier>natives-desktop</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.badlogicgames.gdx</groupId>
+      <artifactId>gdx-box2d-platform</artifactId>
+      <classifier>natives-desktop</classifier>
+      <version>${libGDX.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.badlogicgames.gdx</groupId>
+      <artifactId>gdx-freetype-platform</artifactId>
+      <classifier>natives-desktop</classifier>
+      <version>${libGDX.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.badlogicgames.gdx</groupId>
+      <artifactId>gdx-jnigen</artifactId>
+      <version>${libGDX.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.diffplug.osgi</groupId>
+      <artifactId>com.diffplug.osgi.extension.sun.misc</artifactId>
+      <version>0.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.diffplug.osgi</groupId>
+      <artifactId>com.diffplug.osgi.extension.sun.reflect</artifactId>
+      <version>0.0.0</version>
+    </dependency>
+  </dependencies>
+
+</project>
