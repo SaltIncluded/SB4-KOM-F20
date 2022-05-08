@@ -9,4 +9,11 @@
             <goal>pax:provision</goal>
         </goals>
     </action>
+    <action>
+            <actionName>CUSTOM-pax:provision</actionName>
+            <displayName>pax:provision</displayName>
+            <goals>
+                <goal>pax:provision</goal>
+            </goals>
+        </action>
 </actions>
